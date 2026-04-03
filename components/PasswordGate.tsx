@@ -91,7 +91,7 @@ export default function PasswordGate({ onSuccess }: PasswordGateProps) {
             {/* Hint — only after 3 incorrect attempts */}
             {attempts >= 3 && (
               <p className="mt-3 text-center font-[family-name:var(--font-caveat)] text-sm text-warm-gold/80 transition-opacity duration-500">
-                Hint: What does he call you that means goddess?
+                Hint: What are you ? 🤲
               </p>
             )}
 
