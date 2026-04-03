@@ -9,6 +9,11 @@ const FloatingElements = dynamic(
   { ssr: false }
 );
 
+const EasterEggs = dynamic(
+  () => import("@/components/EasterEggs"),
+  { ssr: false }
+);
+
 export default function ProtectedLayout({
   children,
 }: {
@@ -19,6 +24,7 @@ export default function ProtectedLayout({
       <ScrollProgress />
       <FloatingElements />
       <MusicPlayer />
+      <EasterEggs />
       {children}
     </>
   );
