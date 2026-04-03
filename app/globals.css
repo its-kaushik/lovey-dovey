@@ -82,6 +82,7 @@ body {
   background-color: var(--color-midnight);
   color: var(--color-cream);
   font-family: var(--font-inter);
+  overflow-x: hidden;
 }
 
 /* Film grain overlay */

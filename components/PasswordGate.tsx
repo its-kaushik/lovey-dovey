@@ -49,7 +49,7 @@ export default function PasswordGate({ onSuccess }: PasswordGateProps) {
     <div className="min-h-screen flex items-center justify-center px-6">
       <div className="w-full max-w-sm">
         {/* Envelope / card container */}
-        <div className="rounded-2xl border border-rose-gold/20 bg-midnight-deep/80 p-8 shadow-lg shadow-rose-gold/5 backdrop-blur-sm">
+        <div className="rounded-2xl border border-rose-gold/20 bg-midnight-deep/80 p-8 shadow-lg shadow-rose-gold/5 backdrop-blur-sm [-webkit-backdrop-filter:blur(4px)]">
           {/* Lock icon */}
           <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full border border-rose-gold/30 text-3xl">
             <span role="img" aria-label="lock">
@@ -98,7 +98,7 @@ export default function PasswordGate({ onSuccess }: PasswordGateProps) {
             <button
               type="submit"
               disabled={loading || !password.trim()}
-              className="mt-6 w-full rounded-xl border border-rose-gold/40 bg-rose-gold/10 px-4 py-3 font-[family-name:var(--font-playfair-display)] text-rose-gold transition-all hover:bg-rose-gold/20 disabled:opacity-40 disabled:cursor-not-allowed"
+              className="mt-6 w-full min-h-[44px] rounded-xl border border-rose-gold/40 bg-rose-gold/10 px-4 py-3 font-[family-name:var(--font-playfair-display)] text-rose-gold transition-all hover:bg-rose-gold/20 disabled:opacity-40 disabled:cursor-not-allowed"
             >
               {loading ? "..." : "Open"}
             </button>

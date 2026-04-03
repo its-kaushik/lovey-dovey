@@ -16,7 +16,7 @@ export default function Hero() {
       initial="hidden"
       animate="visible"
       variants={reduced ? noMotion : fadeUp}
-      className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center"
+      className="relative min-h-screen flex flex-col items-center justify-center px-6 text-center max-w-4xl mx-auto"
     >
       <motion.h1
         initial={reduced ? undefined : { opacity: 0, y: 30 }}
@@ -53,7 +53,7 @@ export default function Hero() {
                 scale: { duration: 2, repeat: Infinity, ease: "easeInOut", delay: 1.6 },
               }
         }
-        className="mt-10 rounded-full border border-rose-gold px-8 py-3 font-[family-name:var(--font-playfair-display)] text-rose-gold animate-pulse-glow transition-shadow hover:shadow-[0_0_30px_rgba(232,160,191,0.5)]"
+        className="mt-10 min-h-[44px] rounded-full border border-rose-gold px-8 py-3 font-[family-name:var(--font-playfair-display)] text-rose-gold animate-pulse-glow transition-shadow hover:shadow-[0_0_30px_rgba(232,160,191,0.5)]"
       >
         Read Our Story
       </motion.button>

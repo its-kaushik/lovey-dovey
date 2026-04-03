@@ -55,7 +55,7 @@ export default function ReasonsJar({ reasons }: ReasonsJarProps) {
       <button
         onClick={drawReason}
         disabled={allDrawn}
-        className="rounded-full border border-rose-gold/40 bg-rose-gold/10 px-6 py-3 font-[family-name:var(--font-caveat)] text-lg text-rose-gold transition-all hover:bg-rose-gold/20 disabled:opacity-40 disabled:cursor-not-allowed"
+        className="min-h-[44px] rounded-full border border-rose-gold/40 bg-rose-gold/10 px-6 py-3 font-[family-name:var(--font-caveat)] text-lg text-rose-gold transition-all hover:bg-rose-gold/20 disabled:opacity-40 disabled:cursor-not-allowed"
       >
         {allDrawn ? "All drawn!" : "Draw a Reason"}
       </button>

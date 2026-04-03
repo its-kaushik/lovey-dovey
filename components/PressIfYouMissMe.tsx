@@ -50,7 +50,7 @@ export default function PressIfYouMissMe({ messages }: PressIfYouMissMeProps) {
           transition={
             reduced ? undefined : { duration: 3, repeat: Infinity, ease: "easeInOut" }
           }
-          className="rounded-full border border-rose-gold/40 bg-rose-gold/10 px-8 py-4 font-[family-name:var(--font-caveat)] text-xl text-rose-gold transition-all hover:bg-rose-gold/20"
+          className="min-h-[44px] rounded-full border border-rose-gold/40 bg-rose-gold/10 px-8 py-4 font-[family-name:var(--font-caveat)] text-xl text-rose-gold transition-all hover:bg-rose-gold/20"
         >
           Press if you miss me
         </motion.button>

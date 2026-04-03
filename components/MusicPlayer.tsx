@@ -21,7 +21,7 @@ export default function MusicPlayer() {
       <audio ref={audioRef} src="/music/our-song.mp3" loop />
       <button
         onClick={togglePlay}
-        className="flex items-center gap-2 rounded-full border border-rose-gold/30 bg-midnight-deep/80 px-4 py-2 backdrop-blur-sm transition-all hover:border-rose-gold/50"
+        className="flex items-center gap-2 rounded-full border border-rose-gold/30 bg-midnight-deep/80 px-4 py-2 min-h-[44px] backdrop-blur-sm [-webkit-backdrop-filter:blur(4px)] transition-all hover:border-rose-gold/50"
       >
         <span className="text-sm">{isPlaying ? "⏸" : "▶"}</span>
         <span className="font-[family-name:var(--font-inter)] text-xs text-cream/70">
