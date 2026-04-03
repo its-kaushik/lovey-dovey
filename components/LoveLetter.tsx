@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeUp, noMotion } from "@/lib/motion";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
@@ -20,14 +21,16 @@ export default function LoveLetter() {
         The Love Letter
       </h2>
 
-      {/* Her letter — placeholder card until scan is added */}
-      <div className="mx-auto max-w-md -rotate-1 rounded-sm border-4 border-white/90 bg-white/10 p-6 shadow-xl shadow-black/30">
-        <p className="text-center font-[family-name:var(--font-caveat)] text-sm text-lavender/50">
-          Her handwritten letter goes here
-        </p>
-        <p className="mt-4 text-center font-[family-name:var(--font-caveat)] text-lg text-cream/90">
-          &ldquo;Why did you fall for him so fast?&rdquo;
-        </p>
+      {/* Her letter — scanned image */}
+      <div className="mx-auto max-w-md -rotate-1 rounded-sm border-4 border-white/90 bg-white/10 p-2 shadow-xl shadow-black/30">
+        <Image
+          src="/images/love-letter.jpeg"
+          alt="Her handwritten love letter"
+          width={500}
+          height={700}
+          className="w-full rounded-sm"
+          sizes="(max-width: 768px) 90vw, 500px"
+        />
       </div>
 
       {/* Transcript */}
