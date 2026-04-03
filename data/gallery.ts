@@ -6,5 +6,12 @@ export interface GalleryItem {
   rotation?: number;
 }
 
-// Populated by Kushik with actual photos
-export const galleryItems: GalleryItem[] = [];
+export const galleryItems: GalleryItem[] = [
+  {
+    id: 1,
+    src: "/images/hot-wheels.jpeg",
+    alt: "Hot Wheels collection in a lighted wooden case",
+    caption: "Who gives Hot Wheels in a lighted case? You. That's who.",
+    rotation: -2,
+  },
+];
