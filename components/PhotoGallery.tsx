@@ -102,14 +102,25 @@ export default function PhotoGallery({ items }: PhotoGalleryProps) {
             className="group relative overflow-hidden rounded-sm border-4 border-white/90 bg-white/10 p-1 pb-4 shadow-md transition-transform hover:scale-[1.02]"
             style={{ transform: `rotate(${item.rotation ?? 0}deg)` }}
           >
-            <Image
-              src={item.src}
-              alt={item.alt}
-              width={400}
-              height={400}
-              sizes="(max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"
-              className="aspect-square object-cover"
-            />
+            {item.isVideo ? (
+              <video
+                src={item.src}
+                muted
+                playsInline
+                loop
+                autoPlay
+                className="aspect-square object-cover"
+              />
+            ) : (
+              <Image
+                src={item.src}
+                alt={item.alt}
+                width={400}
+                height={400}
+                sizes="(max-width: 768px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                className="aspect-square object-cover"
+              />
+            )}
             {item.caption && (
               <p className="mt-1 text-center font-[family-name:var(--font-caveat)] text-xs text-cream/60 truncate">
                 {item.caption}
@@ -140,14 +151,24 @@ export default function PhotoGallery({ items }: PhotoGalleryProps) {
                 &times;
               </button>
 
-              <Image
-                src={selectedItem.src}
-                alt={selectedItem.alt}
-                width={900}
-                height={900}
-                sizes="90vw"
-                className="rounded object-contain"
-              />
+              {selectedItem.isVideo ? (
+                <video
+                  src={selectedItem.src}
+                  controls
+                  autoPlay
+                  playsInline
+                  className="max-h-[80vh] rounded object-contain"
+                />
+              ) : (
+                <Image
+                  src={selectedItem.src}
+                  alt={selectedItem.alt}
+                  width={900}
+                  height={900}
+                  sizes="90vw"
+                  className="rounded object-contain"
+                />
+              )}
 
               {selectedItem.caption && (
                 <p className="mt-4 text-center font-[family-name:var(--font-caveat)] text-lg text-cream/80">
