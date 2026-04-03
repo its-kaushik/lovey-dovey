@@ -1,8 +1,21 @@
 "use client";
 
+import { motion } from "framer-motion";
+import { fadeUp, noMotion } from "@/lib/motion";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
+
 export default function LoveLetter() {
+  const reduced = useReducedMotion();
+  const variants = reduced ? noMotion : fadeUp;
+
   return (
-    <section className="mx-auto max-w-3xl px-6 py-20">
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={variants}
+      className="mx-auto max-w-3xl px-6 py-20"
+    >
       <h2 className="mb-12 text-center font-[family-name:var(--font-playfair-display)] text-2xl md:text-3xl lg:text-4xl text-cream">
         The Love Letter
       </h2>
@@ -37,6 +50,6 @@ export default function LoveLetter() {
           little dramatic. And I wouldn&apos;t change a single thing about it.
         </p>
       </div>
-    </section>
+    </motion.section>
   );
 }

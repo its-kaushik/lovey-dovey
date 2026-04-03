@@ -1,5 +1,13 @@
+"use client";
+
+import dynamic from "next/dynamic";
 import MusicPlayer from "@/components/MusicPlayer";
 import ScrollProgress from "@/components/ScrollProgress";
+
+const FloatingElements = dynamic(
+  () => import("@/components/FloatingElements"),
+  { ssr: false }
+);
 
 export default function ProtectedLayout({
   children,
@@ -9,6 +17,7 @@ export default function ProtectedLayout({
   return (
     <>
       <ScrollProgress />
+      <FloatingElements />
       <MusicPlayer />
       {children}
     </>
